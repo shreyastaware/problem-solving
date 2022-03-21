@@ -1,4 +1,6 @@
 #!/bin/python3
+# 20 03 2022
+# Link: https://www.hackerrank.com/challenges/three-month-preparation-kit-two-arrays/problem
 
 import math
 import os
