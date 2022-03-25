@@ -1,6 +1,29 @@
 # 24 03 2022
 # Link: https://www.hackerrank.com/challenges/three-month-preparation-kit-picking-numbers/problem
 
+"""
+Observation:
+
+The absolute difference between any two of the chosen integers must be <= 1, so we need to choose our 
+integers in either of the following ways:
+
+-> We choose all occurrences of one particular integer so that each pair of integers in the multiset has an 
+absolute difference of 0. For example, if a = [1, 4, 4, 4, 4], we choose {4, 4, 4, 4}.
+
+-> We choose all occurrences of two particular integers that differ by  so that each pair of integers 
+in the multiset has an absolute difference of either 0 or 1. For example, if a = [1, 2, 2, 2, 4, 5], 
+we choose {1, 2, 2, 2}.
+
+Solution:
+
+To solve this challenge, we perform the following steps:
+
+Get the frequency of each number, `cnt1, cnt2,...,cnt99` (recall that 0 < ai < 100).
+Find and print the maximal value of any cnt(i) + cnt(i+1) or cnt(i) if there is not an 
+appropriate value to pair with.
+
+"""
+
 #!/bin/python3
 
 import math
@@ -50,7 +73,6 @@ def pickingNumbers(a):
         max_sum = 0
             
     return max_sum
-    
     
     """
     # Method 2
