@@ -1,12 +1,11 @@
 #!/bin/python3
-# 30 03 2022
-# Link: https://www.hackerrank.com/challenges/three-month-preparation-kit-tower-breakers-1/problem
 
 import math
 import os
 import random
 import re
 import sys
+from collections import Counter
 
 #
 # Complete the 'towerBreakers' function below.
@@ -18,7 +17,7 @@ import sys
 #
 
 
-
+"""
 def bestMove(lis, factors, player_num = 1):
     pass
 
@@ -33,10 +32,47 @@ def who_wins(lis, factors, player_num = 1):
         
     
     pass 
+
+
+def findFactorsOfNumber(number):
+    
+    factors = set()
+    
+    for i in range(1, (number//2)+1):
+        if number % i == 0:
+            factors.add(i)
+            if i != 1:
+                factors.add(number//i)
+    
+    return factors
+
+def findBestMove(tower_height_list):
+    
+    unique_tower_heights = Counter(tower_height_list)
+    
+    num_factors = {}
+    
+    for i in unique_tower_heights.keys():
+        if num_factors.get(i) is None:
+            num_factors[i] = findFactorsOfNumber(i)
+    
+    print(num_factors)
+"""
+    
     
 def towerBreakers(n, m):
     # Write your code here
     
+    if m == 1 or n % 2 == 0:
+        return 2
+    
+    return 1
+        
+    # return 2 if (m == 1 or n % 2 == 0) else 1
+    
+    
+    
+    """
     factors = set()
     
     for i in range(1, m):
@@ -50,7 +86,8 @@ def towerBreakers(n, m):
     player_num = who_wins([m]*n, factors)
     
     return player_num
-
+    """
+    
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
