@@ -2,8 +2,6 @@
 # 08 04 2022
 # Link: 
 
-
-
 #!/bin/python3
 
 import math
